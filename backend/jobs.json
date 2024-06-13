@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "status": "Running",
+      "user": "user1",
+      "group": "group1",
+      "dateSubmitted": "2024-06-10T12:34:56Z",
+      "dateCompleted": null,
+      "command": "python /home/user1/train.py",
+      "logData": "Training model...\nEpoch 1: Loss 0.5\n..."
+    },
+    {
+      "id": 2,
+      "status": "Succeeded",
+      "user": "user2",
+      "group": "group2",
+      "dateSubmitted": "2024-06-09T10:22:33Z",
+      "dateCompleted": "2024-06-09T14:22:33Z",
+      "command": "python /home/user2/train.py",
+      "logData": "Training model...\nEpoch 1: Loss 0.5\nEpoch 2: Loss 0.4\n..."
+    }
+  ]
+  
