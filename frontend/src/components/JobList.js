@@ -18,7 +18,7 @@ const JobList = () => {
   };
 
   return (
-    <div>
+    <div className='job-list'>
       <ul>
         {jobs.map(job => (
           <JobItem key={job.id} job={job} onClick={() => handleJobClick(job)} />

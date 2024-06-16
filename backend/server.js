@@ -6,6 +6,9 @@ const port = 3001;
 
 app.use(bodyParser.json());
 
+const cors = require('cors');
+app.use(cors());
+
 const readJobs = () => {
   return new Promise((resolve, reject) => {
     fs.readFile('jobs.json', 'utf8', (err, data) => {
