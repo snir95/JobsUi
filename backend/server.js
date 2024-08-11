@@ -1,12 +1,12 @@
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-
-const cors = require('cors');
 app.use(cors());
 
 const readJobs = () => {
@@ -63,6 +63,11 @@ app.put('/api/jobs/:id', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+// Only start the server if this file is run directly and not as a test
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+  });
+}
+
+module.exports = app; // Export the app for testing
