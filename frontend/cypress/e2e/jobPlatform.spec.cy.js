@@ -2,7 +2,7 @@
 
 describe('Job Platform', () => {
   it('loads job list and displays job details on click', () => {
-    cy.visit('http://localhost:3000'); // Replace with your actual frontend URL
+    cy.visit('http://localhost:80'); // Replace with your actual frontend URL
 
     // Ensure the job list is visible
     cy.get('.job-list').should('be.visible');
